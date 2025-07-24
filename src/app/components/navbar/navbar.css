@@ -1,0 +1,42 @@
+.navbar-large {
+  height: 17vh;
+  transition: height 0.5s;
+}
+
+.navbar-small {
+  height: 12vh;
+  transition: height 0.5s;
+}
+
+.navbar {
+  background-color: #2C3E50 !important;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar h1,
+.navbar .nav-link {
+  font-family: system-ui, 'Segoe UI', sans-serif;
+}
+
+.nav-link.active {
+  background-color: #09c !important;
+  color: #fff !important;
+  border-radius: 25px !important;
+}
+
+.nav-link {
+  margin-right: 12px;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link:first-child {
+  margin-right: 32px;
+} 

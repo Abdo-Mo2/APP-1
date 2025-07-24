@@ -1,0 +1,71 @@
+<section class="gellery-section d-flex align-items-center justify-content-center">
+  <div class="gellery-content text-center">
+    <h2 class="gellery-title mb-4">PORTFOLIO COMPONENT</h2>
+    <div class="gellery-divider d-flex align-items-center justify-content-center mb-4">
+      <div class="divider-line"></div>
+      <span class="divider-icon mx-3">
+        <i class="fa-solid fa-star" style="color: #2C3E55;"></i>
+      </span>
+      <div class="divider-line"></div>
+    </div>
+    <div class="gellery-grid row justify-content-center">
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="gellery-item position-relative" (click)="showImage('/imgi_1_poert1.png')">
+          <img src="/imgi_1_poert1.png" alt="Portfolio 1" class="gellery-img img-fluid rounded shadow" />
+          <div class="gellery-overlay d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-plus fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="gellery-item position-relative" (click)="showImage('/imgi_2_port2.png')">
+          <img src="/imgi_2_port2.png" alt="Portfolio 2" class="gellery-img img-fluid rounded shadow" />
+          <div class="gellery-overlay d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-plus fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="gellery-item position-relative" (click)="showImage('/imgi_3_port3.png')">
+          <img src="/imgi_3_port3.png" alt="Portfolio 3" class="gellery-img img-fluid rounded shadow" />
+          <div class="gellery-overlay d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-plus fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="gellery-item position-relative" (click)="showImage('/imgi_1_poert1.png')">
+          <img src="/imgi_1_poert1.png" alt="Portfolio 4" class="gellery-img img-fluid rounded shadow" />
+          <div class="gellery-overlay d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-plus fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="gellery-item position-relative" (click)="showImage('/imgi_2_port2.png')">
+          <img src="/imgi_2_port2.png" alt="Portfolio 5" class="gellery-img img-fluid rounded shadow" />
+          <div class="gellery-overlay d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-plus fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="gellery-item position-relative" (click)="showImage('/imgi_3_port3.png')">
+          <img src="/imgi_3_port3.png" alt="Portfolio 6" class="gellery-img img-fluid rounded shadow" />
+          <div class="gellery-overlay d-flex align-items-center justify-content-center">
+            <i class="fa-solid fa-plus fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="modalVisible" class="gellery-modal-overlay" (click)="closeModal()">
+    <div class="gellery-modal" (click)="$event.stopPropagation()">
+      <button class="gellery-modal-close" (click)="closeModal()">
+        <i class="fa-solid fa-times"></i>
+      </button>
+      <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected" class="gellery-modal-img" />
+    </div>
+  </div>
+</section>

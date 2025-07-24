@@ -1,0 +1,159 @@
+:host {
+    display: block;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #ffff;
+    position: relative;
+    right: 133px;
+    top: 80px;
+    padding-top: 17vh; /* Adjust for navbar */
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .gellery-section {
+    width: 100%;
+    min-height: calc(100vh - 17vh);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gellery-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .gellery-title {
+    color: #2C3E55;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: system-ui, 'Segoe UI', sans-serif;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .gellery-divider {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.2rem auto;
+  }
+  
+  .divider-line {
+    flex: 1;
+    height: 4px;
+    background: #2C3E55;
+    border-radius: 2px;
+  }
+  
+  .divider-icon {
+    color: #2C3E55;
+    font-size: 2rem;
+  }
+  
+  .gellery-grid {
+    margin-top: 0.5rem;
+  }
+  
+  .gellery-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .gellery-item:hover {
+    transform: scale(1.04);
+  }
+
+  .gellery-item:hover .gellery-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .gellery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 188, 156, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .gellery-overlay i {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  
+  .gellery-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+.gellery-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 62, 85, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.gellery-modal {
+  background: transparent;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+.gellery-modal-img {
+  max-width: 350px;
+  max-height: 60vh;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+
+.gellery-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #2C3E55;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.gellery-modal-close:hover {
+  color: #1ABC9C;
+}
